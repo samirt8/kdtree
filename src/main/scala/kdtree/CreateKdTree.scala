@@ -144,6 +144,23 @@ object CreateKdTree extends Serializable with RddToSplitRddFunctions {
     // Count the number of bounding boxes but don't use count that causes a StackOverflowError for even a moderately-sized RDD.
     val numberOfBoxes: Long = boundingBoxes.mapPartitions(iter => Array(iter.size).iterator, true).collect.sum
 
+    // print le nombre de partition de la RDD et le nombre d'elements par partition
+    val nbPartition = boundingBoxes.partitions.size
+    println("Nombre de partition : "+ nbPartition )
+    println(", Nombre d'elements par partitions : ")
+    boundingBoxes.mapPartitions(iter => Array(iter.size).iterator,true).foreach(x => print(x +","))
+    println("nb de bounding box : " + numberOfBoxes )
+
+    val parts = boundingBoxes.partitions
+    for (p <- parts) {
+        val idx = p.index
+        val partRdd = boundingBoxes.mapPartitionsWithIndex {
+           case(index:Int,value:Iterator[(String,String,Float)]) =>
+             if (index == idx) value else Iterator()}
+        println( "partition : " + idx)
+        partRdd.collect().foreach(println)
+        //Apply further processing on data
+    }
     // Aggregate the KdNodes into this RDD[KdNode] that is empty initially.
     var kdNodeRdd = sc.parallelize(Array[KdNode]())
     var kdNodeRddIsEmpty = true
@@ -241,12 +258,14 @@ object CreateKdTree extends Serializable with RddToSplitRddFunctions {
         } else {
           None
         }
-
+        //println("ID du noeud:" + node.id)
         // Aggregate the node with any children to the RDD[KdNode] and return the node id and its bounding region.
         prependToList(new KdNode(node, loChild, hiChild))
+        //(name, x_min, y_min, x_max, y_max)
       } else {
         throw new RuntimeException(s"number of boxes = $numBoxes")
       }
+      //println("ID du noeud2:" + node.id)
     }
 
     // The following method calls one of the four combinations of the buildKdNode() method,
@@ -277,27 +296,33 @@ object CreateKdTree extends Serializable with RddToSplitRddFunctions {
           pLo.persist
           pHi.persist
           val node = nodeOption.getOrElse(throw new RuntimeException(s"no bounding box"))
+          //println("OK3 : " + node.id)
           permutation match {
             case XMIN => {
               val box = new BoundingBox(node.id, p.takeFirst.xMin, q.takeFirst.yMin, r.takeLast.xMax, s.takeLast.yMax)
+              //println("Ok_xmin, ID du noeud : " + node.id + " p.takefirst xmin : " + p.takeFirst.xMin + " index median : " + medianIndex)
+              //println("Ok_xmin, q.takeFirst.yMin : " +q.takeFirst.yMin + " r.takeLast.xMax : " + r.takeLast.xMax + " s.takeLast.yMax : " + s.takeLast.yMax )
               p.unpersist(blockUntilUnpersisted)
               buildKdNode(node, pLo, pHi, medianIndex, q, r, s, BoundingBox.xMinIsLess, BoundingBox.xMinIsMore, numBoxes, YMIN)
               box
             }
             case YMIN => {
               val box = new BoundingBox(node.id, s.takeFirst.xMin, p.takeFirst.yMin, q.takeLast.xMax, r.takeLast.yMax)
+              //println("Ok_ymin, ID du noeud : " + node.id + "p.takefirst ymin : " + p.takeFirst.yMin + "index median : " + medianIndex)
               p.unpersist(blockUntilUnpersisted)
               buildKdNode(node, pLo, pHi, medianIndex, q, r, s, BoundingBox.yMinIsLess, BoundingBox.yMinIsMore, numBoxes, XMAX)
               box
             }
             case XMAX => {
               val box = new BoundingBox(node.id, r.takeFirst.xMin, s.takeFirst.yMin, p.takeLast.xMax, q.takeLast.yMax)
+              //println("Ok_xmax, ID du noeud : " + node.id + "p.takefirst xmax : " + p.takeFirst.xMax + "index median : " + medianIndex)
               p.unpersist(blockUntilUnpersisted)
               buildKdNode(node, pLo, pHi, medianIndex, q, r, s, BoundingBox.xMaxIsLess, BoundingBox.xMaxIsMore, numBoxes, YMAX)
               box
             }
             case YMAX => {
               val box = new BoundingBox(node.id, q.takeFirst.xMin, r.takeFirst.yMin, s.takeLast.xMax, p.takeLast.yMax)
+              //println("Ok_ymax, ID du noeud : " + node.id + "p.takefirst ymax : " + p.takeFirst.yMax + "index median : " + medianIndex)
               p.unpersist(blockUntilUnpersisted)
               buildKdNode(node, pLo, pHi, medianIndex, q, r, s, BoundingBox.yMaxIsLess, BoundingBox.yMaxIsMore, numBoxes, XMIN)
               box
@@ -307,6 +332,7 @@ object CreateKdTree extends Serializable with RddToSplitRddFunctions {
         } else if (numBoxes == 1) {
           // Retrieve the first (and only) element of the p RDD, which element is a leaf node of the k-d tree.
           val boundingBox = p.takeFirst
+          //println("OK8")
           // Unpersist the p, q, r and s RDDs and block on unpersistence if requested.
           p.unpersist(blockUntilUnpersisted)
           q.unpersist(blockUntilUnpersisted)
@@ -454,4 +480,3 @@ object CreateKdTree extends Serializable with RddToSplitRddFunctions {
   }
 
 }
-

@@ -60,7 +60,7 @@ products:
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$11.class
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$12.class
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$13.class
-   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$2.class
+   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$14.class
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$3.class
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$4.class
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$5.class
@@ -82,11 +82,16 @@ products:
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$createFutureYminViaJava$1.class
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$createFutureYminViaScala$1$$anonfun$apply$2.class
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$createFutureYminViaScala$1.class
-   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$createKdTree$1$$anonfun$apply$5.class
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$createKdTree$1.class
-   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$flushList$1$1$$anonfun$apply$4.class
+   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$createKdTree$2.class
+   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$createKdTree$3$$anonfun$2.class
+   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$createKdTree$3$$anonfun$apply$3.class
+   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$createKdTree$3.class
+   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$createKdTree$4$$anonfun$apply$6.class
+   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$createKdTree$4.class
+   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$flushList$1$1$$anonfun$apply$5.class
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$flushList$1$1.class
-   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$kdtree$CreateKdTree$$prependToList$3$1$$anonfun$apply$3.class
+   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$kdtree$CreateKdTree$$prependToList$3$1$$anonfun$apply$4.class
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$$anonfun$kdtree$CreateKdTree$$prependToList$3$1.class
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$.class
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\build\classes\scala\main\kdtree\CreateKdTree$Permutation$2$.class
@@ -269,7 +274,7 @@ class names:
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$11
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$12
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$13
-   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$2
+   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$14
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$3
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$4
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$5
@@ -292,11 +297,16 @@ class names:
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$createFutureYminViaScala$1
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$createFutureYminViaScala$1$$anonfun$apply$2
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$createKdTree$1
-   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$createKdTree$1$$anonfun$apply$5
+   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$createKdTree$2
+   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$createKdTree$3
+   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$createKdTree$3$$anonfun$2
+   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$createKdTree$3$$anonfun$apply$3
+   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$createKdTree$4
+   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$createKdTree$4$$anonfun$apply$6
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$flushList$1$1
-   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$flushList$1$1$$anonfun$apply$4
+   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$flushList$1$1$$anonfun$apply$5
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$kdtree$CreateKdTree$$prependToList$3$1
-   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$kdtree$CreateKdTree$$prependToList$3$1$$anonfun$apply$3
+   C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$$anonfun$kdtree$CreateKdTree$$prependToList$3$1$$anonfun$apply$4
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\CreateKdTree.scala -> kdtree.CreateKdTree$Permutation$2$
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\KdNode.scala -> kdtree.KdNode
    C:\Users\Samir\Desktop\ENSAE\ELTDM\projet\anc\kdtree\src\main\scala\kdtree\KdNode.scala -> kdtree.KdNode$

@@ -52,14 +52,16 @@ object PartitionViaScala {
                               startIndex: Int,
                               endIndex: Int,
                               listPrepender: (KdNode) => Boolean): BoundingBox = {
-
+      
     if (startIndex == endIndex) {
       // Prepend the terminal node with no children to the List[KdNode] and return the node whose
       // bounding box is by definition its bounding region, so no need to create a bounding region.
       val node = xMinCollected(startIndex)
+      println("Axe : X , Feuille , Id : " + node.id + ", xmin : " + node.xMin)
       listPrepender(new KdNode(node, None, None))
       node
     } else if (endIndex > startIndex) {
+      println("Axe : X , Noeud, startingIndex : "+ startIndex+ ", endIndex : " + endIndex)
       // Partition the xMinCollected Array into low and high halves. The median will provide the id for the KdNode.
       val medianIndex = startIndex + ( (endIndex - startIndex) >> 1 )
       val node: BoundingBox = xMinCollected(medianIndex)
@@ -83,6 +85,8 @@ object PartitionViaScala {
       var yMin = node.yMin
       var xMax = node.xMax
       var yMax = node.yMax
+      print("formule medindex : "+ (startIndex + ( (endIndex - startIndex) >> 1 )) + " medIndex sur axe X: "+ medianIndex+ ", BoundingBox Id : " + node.id)
+      println(", Xmin : " + xMin)
 
       // Create the low child that comprises an id and a bounding region via partitioning by yMin.
       // The yMincollected and temporary arrays are swapped in the partitionByYminViaScala() call.
@@ -137,13 +141,16 @@ object PartitionViaScala {
                               listPrepender: (KdNode) => Boolean): BoundingBox = {
 
     if (startIndex == endIndex) {
+
       // Prepend the terminal node with no children to the List[KdNode] and return the node whose
       // bounding box is by definition its bounding region, so no need to create a bounding region.
       // Split the xMinCollected Array into low and high halves. The median will provide the id for the KdNode.
       val node = yMinCollected(startIndex)
+      println("Axe : Y, Feuille,  Id : " + node.id + ", ymin : " + node.yMin)
       listPrepender(new KdNode(node, None, None))
       node
     } else if (endIndex > startIndex) {
+      println("Axe : Y , Noeud , startingIndex : "+ startIndex+ ", endIndex : " + endIndex)
       // Partition the yMinCollected Array into low and high halves. The median will provide the id for the KdNode.
       val medianIndex = startIndex + ( (endIndex - startIndex) >> 1 )
       val node: BoundingBox = yMinCollected(medianIndex)
@@ -167,7 +174,8 @@ object PartitionViaScala {
       var yMin = node.yMin
       var xMax = node.xMax
       var yMax = node.yMax
-
+      println("formule medindex : "+ (startIndex + ( (endIndex - startIndex) >> 1 )) + ", medIndex sur axe Y: "+ medianIndex+ ", BoundingBox Id : " + node.id)
+      println(", Ymin : " + yMin)
       // Create the low child that comprises an id and a bounding region via partitioning by xMin.
       // The xMincollected and temporary arrays are swapped in the partitionByXminViaScala() call.
       val loChild: Option[BoundingBox] = if (loIndex >= startIndex) {
