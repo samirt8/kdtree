@@ -78,7 +78,7 @@ object BuildAndSearchKdTreeTiming extends Serializable {
 
     // Parse the arguments and supply defaults where necessary.
     val arguments: OptionMap = ParseArgs.parse(args)
-    val input: String = arguments.get('input).getOrElse{s"src/test/resources/box/inputs/boundingBox.txt"}.toString
+    val input: String = arguments.get('input).getOrElse{s"kdtree/src/test/resources/box/inputs/*"}.toString
     val partitions: Int = arguments.get('partitions).getOrElse{s"1"}.toString.toInt
     val copies: Int = arguments.get('copies).getOrElse{s"1"}.toString.toInt
     val cutoff: Int = arguments.get('cutoff).getOrElse{s"32"}.toString.toInt
