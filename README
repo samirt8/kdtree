@@ -1,0 +1,21 @@
+The "build.gradle" file specifies creation of a "build/distributions/kdtree.tar" file that can be expanded to obtain a "kdtree.jar" file.  That .jar file specifies the Main-Class as BuildAndSearchKdTreeTiming that builds and searches a k-d tree and reports the execution times for both.
+
+The BuildAndSearchKdTreeTiming.main() method may be executed via the "spark-submit" script.  The following arguments may be specified via the spark-submit command-line:
+
+--input : Path to a tab-separated-value text file that comprises some number of rectangles.  Default file name is src/test/resources/box/inputs/boundingBox.txt that comprises 16 rectangles.
+
+--partitions : The number of partitions for the resilient distributed dataset (RDD) that represents the rectangles.  Default is 1.
+
+--copies : The number of copies of the rectangles that are created.  For example, if a value of 3 is specified, a 3 by 3 matrix of the 16 rectangles from the default input file, or 3*3*16=144 rectangles are created.  Default is 1.
+
+--cutoff : If the size of an RDD is <= cutoff, the k-d tree building algorithm begins to subdivide arrays instead of RDDs, which accelerates the algorithm.  Also the number of partitions for the RDD that comprises all of the copied rectangles and the RDD that comprises all of the k-d tree nodes, unless the specified partitions argument is larger.  Default is 32.
+
+--persist : The manner in which to persist RDDS (choices are DISK_ONLY, DISK_ONLY_2, MEMORY_AND_DISK, MEMORY_AND_DISK_2, MEMORY_AND_DISK_SER, MEMORY_AND_DISK_SER_2, MEMORY_ONLY, MEMORY_ONLY_2, MEMORY_ONLY_SER_2, NONE or OFF_HEAP).  Default is MEMORY_ONLY.
+
+--block : If true, block for unpersistence of RDDS.  Default is true.
+
+--kryo : If true, use the KryoSerializer.  Default is false because the KryoSerializer appears to be incompatible with a sorted RDD.
+
+--compress : If true, compress RDDs.  Default is false.
+
+--java : If true, call Java methods instead of Scala methods to build the lower portion of the tree when the size of an array <= cutoff.  The Java methods use an ArrayList that probably requires less memory than a Scala List but the Java methods are about 10% slower than the Scala methods.  Default is true.

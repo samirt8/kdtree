@@ -1,0 +1,49 @@
+/*
+ * This build.gradle is a combination of the gradle-supplied build.gradle file
+ * and recommendations from answer #7 at the following URL:
+ *
+ * http://stackoverflow.com/questions/21721119/creating-runnable-jar-with-gradle
+ */
+
+// Apply the scala plugin to add support for Scala.
+apply plugin: 'scala'
+
+// This plugin is necessary for building the distribution .jar file (see below).
+apply plugin: 'java-library-distribution'
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    // Use 'jcenter' for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+}
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+    // Use Scala 2.10.6 for compatibility with Spark 1.5.2
+    compile 'org.scala-lang:scala-library:2.10.6'
+	//compile 'org.scala-lang:scala-library:2.11.7'
+    compile 'org.apache.spark:spark-core_2.10:1.5.2'
+	//compile 'org.apache.spark:spark-core_2.10:2.2.1'
+
+    // We use Scalatest for testing our library
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.scalatest:scalatest_2.11:2.2.4'
+    testRuntime 'org.scala-lang.modules:scala-xml_2.11:1.0.3'
+}
+
+// Task "distZip" added by plugin "java-library-distribution":
+distZip.shouldRunAfter(build)
+
+jar {
+    // Keep jar clean:
+    exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA', 'META-INF/*.MF'
+
+    manifest {
+        attributes 'Main-Class': 'build.BuildAndSearchKdTreeTiming',
+                    'Class-Path': configurations.runtime.files.collect { "lib/$it.name" }.join(' ')
+    }
+    // How-to add class path:
+    //     http://stackoverflow.com/questions/22659463/add-classpath-in-manifest-using-gradle
+    //     https://gist.github.com/simon04/6865179
+}
