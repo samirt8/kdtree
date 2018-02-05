@@ -145,22 +145,24 @@ object CreateKdTree extends Serializable with RddToSplitRddFunctions {
     val numberOfBoxes: Long = boundingBoxes.mapPartitions(iter => Array(iter.size).iterator, true).collect.sum
 
     // print le nombre de partition de la RDD et le nombre d'elements par partition
-    val nbPartition = boundingBoxes.partitions.size
-    println("Nombre de partition : "+ nbPartition )
-    println(", Nombre d'elements par partitions : ")
+    val nbPartitions = boundingBoxes.partitions.size
+    println(" Nombre de partitions : "+ nbPartitions )
+    println (" Nombre d'elements par partitions : " )
     boundingBoxes.mapPartitions(iter => Array(iter.size).iterator,true).foreach(x => print(x +","))
-    println("nb de bounding box : " + numberOfBoxes )
+    println("")
+    println(" Nb de rectangles : " + numberOfBoxes )
+    println(" Detail des partitions: ")
 
-    val parts = boundingBoxes.partitions
-    for (p <- parts) {
+    //val parts = boundingBoxes.partitions
+    for (p <- boundingBoxes.partitions) {
         val idx = p.index
         val partRdd = boundingBoxes.mapPartitionsWithIndex {
            case(index:Int,value:Iterator[(String,String,Float)]) =>
              if (index == idx) value else Iterator()}
-        println( "partition : " + idx)
+        println( "Partition : " + idx)
         partRdd.collect().foreach(println)
-        //Apply further processing on data
     }
+
     // Aggregate the KdNodes into this RDD[KdNode] that is empty initially.
     var kdNodeRdd = sc.parallelize(Array[KdNode]())
     var kdNodeRddIsEmpty = true
